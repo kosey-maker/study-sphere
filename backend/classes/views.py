@@ -39,6 +39,7 @@ def request_to_join(request, class_id):
 
     
  #educator accept the request to join or no
+
 def joinrequest(request, membership_id): 
     if request.method == 'POST':
         membership = get_object_or_404(ClassMembership, id=membership_id)
@@ -76,7 +77,7 @@ def joinrequest(request, membership_id):
         return JsonResponse({'status': 'success', 'message': 'Student removed from class.'})
      
 
-     #  function give the calss
+     # function give the calss
      def get_class(request, class_id):
       if request.method == 'GET':
         
